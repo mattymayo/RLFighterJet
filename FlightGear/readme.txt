@@ -9,8 +9,8 @@ The performance of fully developed models is confidential and cannot be commente
 
 ## What does the plane see?
 Because we are using an auxillary flight simulator (FlightGear) and not the gym environment itself, a series of hooks were needed to allow the agents to both see and interact with the environment. By exploiting FG's telnet system, we are able to read data out from the simulator as well as set certain control values. By adjusting the frequency that telnet functions we were able to acheive near real-time data readouts over telnet. The plane's observation space is a set of 18 variables described as:
-`
-        `obs[0] = self.fgtn.getprop("/position/latitude-deg")`
+```python
+        obs[0] = self.fgtn.getprop("/position/latitude-deg")`
         obs[1] = self.fgtn.getprop("/position/longitude-deg")
         obs[2] = self.fgtn.getprop("/position/altitude-ft")
         obs[3] = self.fgtn.getprop("/orientation/heading-deg")
@@ -28,4 +28,4 @@ Because we are using an auxillary flight simulator (FlightGear) and not the gym 
         obs[15] = self.fgtn.getprop("/ai/models/multiplayer/orientation/true-heading-deg")
         obs[16] = self.fgtn.getprop("/ai/models/multiplayer/orientation/roll-deg")
         obs[17] = self.fgtn.getprop("/ai/models/multiplayer/orientation/pitch-deg")
-        `
+```
