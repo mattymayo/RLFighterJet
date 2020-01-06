@@ -1,0 +1,17 @@
+FlightGear
+	-Folder with scripts developing our WIP model for autonomous dogfighting
+	-FGTelnet.py facilitates communications to flight simulator
+	-Hooks.py facilitates Read/Write operations to flight simulator
+	-mainA2c.py trains a model using the A2C algorithm
+	-mainPPO.py trains a model using the PPO algorithm
+	-simulate.py doesn't train a model, instead it loads the env and runs it to demonstrate performance
+	/env/
+		-FlightGearEnv.py the custom environment that facilitates env manipulation for RL
+		-__init__.py blank file just to preserve file structure
+		/__pycache__/ cache of python files
+	/models/
+		-Various folders to store models trained with different algorithms and target reward functions
+	/__pycache__/
+		Cache of python files
+	/tensorboard/
+		Stored runs for analysis on training
